@@ -34,14 +34,14 @@
    <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark px-3">
     <div class="container-fluid">
-      <a class="navbar-brand col-2" href="#">Ask someone</a>
+      <a class="navbar-brand col-2" href="index.html">Ask someone</a>
       <form class="d-flex col-6 align-items-center">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-primary" type="submit">Search</button>
       </form>
       <div class="col-4 text-end">
-        <button type="button" class="btn btn-outline-light me-2">Login</button>
-        <button type="button" class="btn btn-warning">Sign-up</button>
+        <button type="button" class="btn btn-outline-light me-2" onclick="window.location.href='login.html'">Login</button>
+        <button type="button" class="btn btn-primary">Sign-up</button>
       </div>
     </div>
   </nav>
@@ -51,80 +51,56 @@
 <main class="flex-shrink-0">
   <div class="container">
     <div class ="row">
-      <div class = "col-8">
-        <div class="row questions-type">
-          <p>
-            <span style="margin-top: 50px; font-size: 40px;">New question</span>
-          </p>          
-        </div>
-        <div class="row question">
-          <div class="row question-data">
-            <div class="col-3">
-              <div class="row">
-                <img src="img/avatar.jpg" class="rounded-circle float-start" alt="...">
+      <div class="col-8">
+        <div class="row" style="margin-top: 50px;"></div>
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">Registration</h4>
+          <p class="text-danger">
+            Sorry, this email address is already registered!
+          </p>
+          <form class="needs-validation" novalidate>
+            <div class="row g-3">
+              
+              <div class="col-12">
+                <label for="username" class="form-label">Login</label>
+                <input type="text" class="form-control" id="username" placeholder="Login" required>
               </div>
-              <div class="row" style="margin-top: 10px;">
-                <script type="text/javascript">
-                  var clicks = 0;
-                  function like() {
-                      clicks += 1;
-                      document.getElementById("clicks").innerHTML = clicks;
-                  };
-                  function dislike() {
-                      clicks -= 1;
-                      document.getElementById("clicks").innerHTML = clicks;
-                  };
-                </script>
-                <div class="col-10">
-                  <button type="button" onclick="like()" class="btn btn-success me-1">Like</button>
-                  <button type="button" onclick="dislike()" class="btn btn-danger">Dislike</button>
-                </div>
-                <div class="col-2">
-                  <p><a id="clicks">0</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-9">
-              <div class="row">
-                <h2>
-                  <a href="#">
-                    Lorem ipsum dolor sit
-                  </a>
-                </h2>
-                <div>
-                  amet consectetur adipisicing elit. Omnis,
-                   vitae tempore odit quos excepturi sequi 
-                   facilis temporibus veniam atque est fugit 
-                   necessitatibus dolorem vel enim perferendis 
-                   error fuga rerum officia.
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-5">
-                  <a href="#">answers(3)</a>
-                </div>
-                <div class="col-7">
-                  <p>
-                    <span>Tags: </span>
-                    <span><a href="#">news</a></span>
-                    <span><a href="#">history</a></span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-          
-            
-          </div>
-        </div>
-        
 
+              <div class="col-12">
+                <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              </div>
+
+              <div class="col-12">
+                <label for="NickName" class="form-label">NickName</label>
+                <input type="text" class="form-control" id="username" placeholder="NickName" required>
+              </div>
+
+              <div class="col-12">
+                <label for="floatingPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+              </div>
+
+              <div class="col-12">
+                <label for="floatingPassword" class="form-label">Repeat password</label>
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Repeat password">
+              </div>
+
+              <div class="col-12">
+                <label for="avatar" class="form-label">Upload avatar</label>
+                <input type="text" class="form-control" id="username" placeholder="Upload avatar" required>
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Register!</button>
+          </form>
+        </div>
+      </div>
 
         <!--- Place for page navigation -->
 
-
-      </div>
       <div class = "col-4 popular-tags">
         <div class="row">
           <h3>
@@ -163,10 +139,8 @@
       </div>
     </div>
     <div class="row" style="margin-top: 20px;">
-        <div class="col-3">
 
-            <button type="button" class="btn btn-outline-dark me-2">Ask!</button>
-        </div>
+      
     </div>
   </div>
 </main>
