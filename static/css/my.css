@@ -12,6 +12,10 @@ main > .container {
     padding: 15px;
     margin-top: 10px;
   }
+  .question-title {
+    padding: 15px;
+    margin-top: 10px;
+  }
 
   .profile{
     width: 100px;
@@ -29,8 +33,18 @@ main > .container {
     font-size: 20px;
   }
   
-  .question-data{
+  .question-data img{
+    width: 150px;
+  }
 
+  .answer {
+    border: 1px grey solid;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 25px;
+  }
+  .answer img {
+    width: 150px;
   }
 
   .login{

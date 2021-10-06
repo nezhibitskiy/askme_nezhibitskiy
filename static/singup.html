@@ -35,13 +35,15 @@
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark px-3">
     <div class="container-fluid">
       <a class="navbar-brand col-2" href="index.html">Ask someone</a>
-      <form class="d-flex col-6 align-items-center">
+      <form class="d-flex col-4 align-items-center">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary" type="submit">Search</button>
       </form>
+      <div class="col-2">
+        <button class="btn btn-outline-primary" type="submit" onclick="window.location.href='ask.html'">Ask!</button>
+      </div>
       <div class="col-4 text-end">
-        <button type="button" class="btn btn-outline-light me-2">Login</button>
-        <button type="button" class="btn btn-primary" onclick="window.location.href='singup.html'">Sign-up</button>
+        <button type="button" class="btn btn-outline-light me-2" onclick="window.location.href='login.html'">Login</button>
+        <button type="button" class="btn btn-primary">Sign up</button>
       </div>
     </div>
   </nav>
@@ -51,28 +53,53 @@
 <main class="flex-shrink-0">
   <div class="container">
     <div class ="row">
-      <div class="col-4 login">
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-        <p class="text-danger">
-          Sorry, wrong password!
-        </p>
-        <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-          <label for="floatingInput">Email address</label>
+      <div class="col-8">
+        <div class="row" style="margin-top: 50px;"></div>
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">Registration</h4>
+          <p class="text-danger">
+            Sorry, this email address is already registered!
+          </p>
+          <form class="needs-validation" novalidate>
+            <div class="row g-3">
+              
+              <div class="col-12">
+                <label for="username" class="form-label">Login</label>
+                <input type="text" class="form-control" id="username" placeholder="Login" required>
+              </div>
+
+              <div class="col-12">
+                <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              </div>
+
+              <div class="col-12">
+                <label for="NickName" class="form-label">NickName</label>
+                <input type="text" class="form-control" id="username" placeholder="NickName" required>
+              </div>
+
+              <div class="col-12">
+                <label for="floatingPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+              </div>
+
+              <div class="col-12">
+                <label for="floatingPassword" class="form-label">Repeat password</label>
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Repeat password">
+              </div>
+
+              <div class="col-12">
+                <label for="avatar" class="form-label">Upload avatar</label>
+                <input type="file" class="form-control" id="inputGroupFile" placeholder="Upload avatar" required>
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Register!</button>
+          </form>
         </div>
-        <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-          <label for="floatingPassword">Password</label>
-        </div>
-    
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Log in</button>
       </div>
-      <div class="col-4"></div>
 
         <!--- Place for page navigation -->
 
