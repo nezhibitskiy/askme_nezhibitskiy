@@ -42,8 +42,12 @@
         <button class="btn btn-outline-primary" type="submit" onclick="window.location.href='ask.html'">Ask!</button>
       </div>
       <div class="col-4 text-end">
-        <button type="button" class="btn btn-outline-light me-2" onclick="window.location.href='login.html'">Login</button>
-        <button type="button" class="btn btn-primary" onclick="window.location.href='singup.html'">Sign up</button>
+        <div class="col-4 logined">
+          <img src="img/avatar.jpg" class="rounded-circle float-start" alt="...">
+        </div>
+        <div class="col-8 ">
+          <p class="text-success"> Logined in</p>
+        </div>
       </div>
     </div>
   </nav>
@@ -78,10 +82,12 @@
                       document.getElementById("clicks").innerHTML = clicks;
                   };
                 </script>
-                <div class="col-12">
+                <div class="col-10">
                   <button type="button" onclick="like()" class="btn btn-success me-1">Like</button>
                   <button type="button" onclick="dislike()" class="btn btn-danger">Dislike</button>
-                  <span style="margin-left:4px"><a id="clicks">0</a></span>
+                </div>
+                <div class="col-2">
+                  <p><a id="clicks">0</a></p>
                 </div>
               </div>
             </div>
@@ -138,10 +144,12 @@
                       document.getElementById("clicks2").innerHTML = clicks2;
                   };
                 </script>
-                <div class="col-12">
+                <div class="col-10">
                   <button type="button" onclick="like2()" class="btn btn-success me-1">Like</button>
                   <button type="button" onclick="dislike2()" class="btn btn-danger">Dislike</button>
-                  <span style="margin-left:4px"><a id="clicks2">0</a></span>
+                </div>
+                <div class="col-2">
+                  <p><a id="clicks2">0</a></p>
                 </div>
               </div>
             </div>
@@ -198,10 +206,12 @@
                       document.getElementById("clicks3").innerHTML = clicks3;
                   };
                 </script>
-                <div class="col-12">
+                <div class="col-10">
                   <button type="button" onclick="like3()" class="btn btn-success me-1">Like</button>
                   <button type="button" onclick="dislike3()" class="btn btn-danger">Dislike</button>
-                  <span style="margin-left:4px"><a id="clicks3">0</a></span>
+                </div>
+                <div class="col-2">
+                  <p><a id="clicks3">0</a></p>
                 </div>
               </div>
             </div>
@@ -305,11 +315,6 @@
   </div>
 </main>
 
-<footer class="footer mt-auto py-5 bg-light">
-  <div class="container">
-    <span class="text-muted">Copyright Ask Someone.</span>
-  </div>
-</footer>
     <script src="js/bootstrap.bundle.min.js"></script>
 
       

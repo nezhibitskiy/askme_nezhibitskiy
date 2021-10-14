@@ -2,6 +2,9 @@ main > .container {
     padding: 60px 15px 0;
   }
 
+  body{
+    padding-bottom: 100px;
+  }
   .questions-type {
     margin-top: 50px;
   }
@@ -35,6 +38,11 @@ main > .container {
   
   .question-data img{
     width: 150px;
+  }
+
+  .logined img{
+    width: 50px;
+    margin-left: 300px;
   }
 
   .answer {
