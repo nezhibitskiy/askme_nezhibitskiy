@@ -34,19 +34,31 @@
    <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark px-3">
     <div class="container-fluid">
-      <a class="navbar-brand col-2" href="index.html">Ask someone</a>
+      <a class="navbar-brand col-2" href="index_loginedIn.html">Ask someone</a>
       <form class="d-flex col-4 align-items-center">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       </form>
-      <div class="col-2">
+      <div class="col-4">
         <button class="btn btn-outline-primary" type="submit" onclick="window.location.href='ask.html'">Ask!</button>
       </div>
-      <div class="col-4 text-end">
-        <div class="col-4 logined">
-          <img src="img/avatar.jpg" class="rounded-circle float-start" alt="...">
-        </div>
-        <div class="col-8 ">
-          <p class="text-success"> Logined in</p>
+      <div class="col-2">
+        <div class="row">
+          <div class="col-4 logined">
+            <img src="img/avatar.jpg" class="rounded-circle" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="row">
+              <span class="text-success">Mr. Sinatra</span>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <a href="#">Settings</a>
+              </div>
+              <div class="col-8">
+                <a href="index.html">LogOut</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -82,12 +94,10 @@
                       document.getElementById("clicks").innerHTML = clicks;
                   };
                 </script>
-                <div class="col-10">
+                <div class="col-12">
                   <button type="button" onclick="like()" class="btn btn-success me-1">Like</button>
                   <button type="button" onclick="dislike()" class="btn btn-danger">Dislike</button>
-                </div>
-                <div class="col-2">
-                  <p><a id="clicks">0</a></p>
+                  <span style="margin-left:4px"><a id="clicks">0</a></span>
                 </div>
               </div>
             </div>
@@ -144,12 +154,10 @@
                       document.getElementById("clicks2").innerHTML = clicks2;
                   };
                 </script>
-                <div class="col-10">
+                <div class="col-12">
                   <button type="button" onclick="like2()" class="btn btn-success me-1">Like</button>
                   <button type="button" onclick="dislike2()" class="btn btn-danger">Dislike</button>
-                </div>
-                <div class="col-2">
-                  <p><a id="clicks2">0</a></p>
+                  <span style="margin-left:4px"><a id="clicks2">0</a></span>
                 </div>
               </div>
             </div>
@@ -206,12 +214,10 @@
                       document.getElementById("clicks3").innerHTML = clicks3;
                   };
                 </script>
-                <div class="col-10">
+                <div class="col-12">
                   <button type="button" onclick="like3()" class="btn btn-success me-1">Like</button>
                   <button type="button" onclick="dislike3()" class="btn btn-danger">Dislike</button>
-                </div>
-                <div class="col-2">
-                  <p><a id="clicks3">0</a></p>
+                  <span style="margin-left:4px"><a id="clicks3">0</a></span>
                 </div>
               </div>
             </div>
@@ -249,7 +255,7 @@
             
           </div>
         </div>
-
+        
         <!--- Place for page navigation -->
 
 
