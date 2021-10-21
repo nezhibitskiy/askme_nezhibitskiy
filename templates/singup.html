@@ -1,152 +1,50 @@
+{% extends "include/base.html" %}
+{% load static %}
 
-<!doctype html>
-<html lang="en" class="h-100">
-  <head>
-    <meta charset="utf-8">
-    <title>Ask someone</title>
-
-    <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="css/my.css" rel="stylesheet">
-  </head>
-  <body class="d-flex flex-column h-100">
-    
-<header>
-   <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark px-3">
-    <div class="container-fluid">
-      <a class="navbar-brand col-2" href="index.html">Ask someone</a>
-      <form class="d-flex col-4 align-items-center">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      </form>
-      <div class="col-2">
-        <button class="btn btn-outline-primary" type="submit" onclick="window.location.href='ask.html'">Ask!</button>
-      </div>
-      <div class="col-4 text-end">
-        <button type="button" class="btn btn-outline-light me-2" onclick="window.location.href='login.html'">Login</button>
-      </div>
-    </div>
-  </nav>
-</header>
-
-<!-- Begin page content -->
-<main class="flex-shrink-0">
-  <div class="container">
-    <div class ="row">
-      <div class="col-8">
-        <div class="row" style="margin-top: 50px;"></div>
-        <div class="col-md-7 col-lg-8">
-          <h4 class="mb-3">Registration</h4>
-          <p class="text-danger">
-            Sorry, this email address is already registered!
-          </p>
-          <form class="needs-validation" novalidate>
-            <div class="row g-3">
-              
-              <div class="col-12">
-                <label for="username" class="form-label">Login</label>
-                <input type="text" class="form-control" id="username" placeholder="Login" required>
-              </div>
-
-              <div class="col-12">
-                <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
-                <input type="email" class="form-control" id="email" placeholder="you@example.com">
-              </div>
-
-              <div class="col-12">
-                <label for="NickName" class="form-label">NickName</label>
-                <input type="text" class="form-control" id="username" placeholder="NickName" required>
-              </div>
-
-              <div class="col-12">
-                <label for="floatingPassword" class="form-label">Password</label>
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-              </div>
-
-              <div class="col-12">
-                <label for="floatingPassword" class="form-label">Repeat password</label>
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Repeat password">
-              </div>
-
-              <div class="col-12">
-                <label for="avatar" class="form-label">Upload avatar</label>
-                <input type="file" class="form-control" id="inputGroupFile" placeholder="Upload avatar" required>
-              </div>
-            </div>
-
-            <hr class="my-4">
-            <button class="w-100 btn btn-primary btn-lg" onclick="window.location.href='index_loginedIn.html'" type="submit">Register!</button>
-          </form>
-        </div>
-      </div>
-
-        <!--- Place for page navigation -->
-
-      <div class = "col-4 popular-tags">
-        <div class="row">
-          <h3>
-            Popular tags
-          </h3>
-        </div>
-        <div class="row tags">
-          <p>
-            <span><a href="#" style="color: red; font-size: 24px; margin-left: 6px; text-decoration: none;">perl</a></span>
-            <span><a href="#" style="color: blue; font-size: 30px; margin-left: 8px; text-decoration: none;">Python</a></span>
-            <span><a href="#" style="color: black; font-size: 34px; margin-left: 8px; text-decoration: none;">TechnoPark</a></span>
-          </p>
-          <p>
-            <span><a href="#" style="color: red; font-size: 30px; margin-left: 8px; text-decoration: none;">MySQL</a></span>
-            <span><a href="#" style="color: green; font-size: 28px; margin-left: 8px; text-decoration: none;">django</a></span>
-          </p>
-          <p>
-            <span><a href="#" style="color: black; font-size: 34px; margin-left: 6px; text-decoration: none;">Mail.ru</a></span>
-            <span><a href="#" style="color: red; font-size: 28px; margin-left: 8px; text-decoration: none;">Chromium</a></span>
-            <span><a href="#" style="color: orange; font-size: 24px; margin-left: 8px; text-decoration: none;">FireFox</a></span>
-          </p>
-        </div>
-        <div class="row">
-          <h3>
-            Best Members
-          </h3>
-        </div>
-        <div class="row best-members">
-          <a href="#">Ted Mosby</a>
-          <a href="#">Barney Stinson</a>
-          <a href="#">Robin Scherbatsky</a>
-          <a href="#">Marshall Eriksen</a>
-          <a href="#">Lily Aldrin</a>
-          <a href="#">Dr.House</a>
-        </div>
-      </div>
-    </div>
-    <div class="row" style="margin-top: 20px;">
-
+{% block data %}
+<div class="row" style="margin-top: 50px;"></div>
+<div class="col-md-7 col-lg-8">
+  <h4 class="mb-3">Registration</h4>
+  <p class="text-danger">
+    Sorry, this email address is already registered!
+  </p>
+  <form class="needs-validation" novalidate>
+    <div class="row g-3">
       
+      <div class="col-12">
+        <label for="username" class="form-label">Login</label>
+        <input type="text" class="form-control" id="username" placeholder="Login" required>
+      </div>
+
+      <div class="col-12">
+        <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+        <input type="email" class="form-control" id="email" placeholder="you@example.com">
+      </div>
+
+      <div class="col-12">
+        <label for="NickName" class="form-label">NickName</label>
+        <input type="text" class="form-control" id="username" placeholder="NickName" required>
+      </div>
+
+      <div class="col-12">
+        <label for="floatingPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      </div>
+
+      <div class="col-12">
+        <label for="floatingPassword" class="form-label">Repeat password</label>
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Repeat password">
+      </div>
+
+      <div class="col-12">
+        <label for="avatar" class="form-label">Upload avatar</label>
+        <input type="file" class="form-control" id="inputGroupFile" placeholder="Upload avatar" required>
+      </div>
     </div>
-  </div>
-</main>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <hr class="my-4">
+    <button class="w-100 btn btn-primary btn-lg" onclick="window.location.href='index_loginedIn.html'" type="submit">Register!</button>
+  </form>
+</div>
 
-      
-  </body>
-</html>
+{% endblock data %}
