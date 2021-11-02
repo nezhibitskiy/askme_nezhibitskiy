@@ -1,0 +1,57 @@
+{% load static %}
+
+<div class="row question">
+    <div class="row question-data">
+      <div class="col-3">
+        <div class="row">
+          <img src="{% static "img/avatar.jpg" %}" class="rounded-circle float-start" alt="...">
+        </div>
+        <div class="row" style="margin-top: 10px;">
+          <script type="text/javascript">
+            var clicks = 0;
+            function like() {
+                clicks += 1;
+                document.getElementById("clicks").innerHTML = clicks;
+            };
+            function dislike() {
+                clicks -= 1;
+                document.getElementById("clicks").innerHTML = clicks;
+            };
+          </script>
+          <div class="col-12">
+            <button type="button" onclick="like()" class="btn btn-success me-1">Like</button>
+            <button type="button" onclick="dislike()" class="btn btn-danger">Dislike</button>
+            <span style="margin-left:4px"><a id="clicks">0</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="row">
+          <h2>
+            <a href="/question">
+              {{ question.title }}
+            </a>
+          </h2>
+          <div>
+            {{ question.text }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5">
+            <a href="/question">answers(3)</a>
+          </div>
+          <div class="col-7">
+            <p>
+              <span>Tags: </span>
+              <span><a href="#">news</a></span>
+              <span><a href="#">history</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+    
+      
+    </div>
+  </div>
