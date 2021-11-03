@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls.conf import include
 
 from app import views
 
@@ -27,4 +28,8 @@ urlpatterns = [
     path('', views.index),
     path('hot/', views.hot),
     path('new/', views.index),
+]
+
+urlpatterns += [
+    path('catalog/', include('catalog.urls'))
 ]

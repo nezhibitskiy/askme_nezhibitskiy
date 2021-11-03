@@ -39,15 +39,15 @@ def singup(request):
 
 tags = ['perl', 'Python', 'TechnoPark', 'MySQL', 'django', 'Mail.ru', 'Chromium', 'FireFox']
 
-tag = [
-    {
-        "title": f"{tags[i]}"
-    } for i in range(tags.count)
-]
+# tag = [
+#     {
+#         "title": f"{tags[i]}"
+#     } for i in range(tags.count)
+# ]
 
-def tag(request):
-    page = request.GET.get('page')
-    return render(request, 'tag.html', {})
+# def tag(request):
+#     page = request.GET.get('page')
+#     return render(request, 'tag.html', {})
 
 def login(request):
     return render(request, 'login.html', {})
