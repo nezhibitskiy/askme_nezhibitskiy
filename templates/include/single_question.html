@@ -28,7 +28,7 @@
       <div class="col-9">
         <div class="row">
           <h2>
-            <a href="/question">
+            <a href={% url 'question' %}>
               {{ question.title }}
             </a>
           </h2>
@@ -38,12 +38,12 @@
         </div>
         <div class="row">
           <div class="col-5">
-            <a href="/question">answers(3)</a>
+            <a href={% url 'question' %}>answers(3)</a>
           </div>
           <div class="col-7">
             <p>
               <span>Tags: </span>
-              <span><a href="#">news</a></span>
+              <span><a href={% url 'tag' %}>news</a></span>
               <span><a href="#">history</a></span>
             </p>
           </div>

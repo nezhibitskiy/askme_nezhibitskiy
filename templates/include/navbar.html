@@ -2,16 +2,16 @@
     <!-- Fixed navbar -->
    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark px-3">
      <div class="container-fluid">
-       <a class="navbar-brand col-2" href="/">Ask someone</a>
+       <a class="navbar-brand col-2" href={% url 'index' %}>Ask someone</a>
        <form class="d-flex col-4 align-items-center">
          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
        </form>
        <div class="col-2">
-         <button class="btn btn-outline-primary" type="submit" onclick="window.location.href='/ask'">Ask!</button>
+         <button class="btn btn-outline-primary" type="submit" onclick="window.location.href={% url 'ask' %}">Ask!</button>
        </div>
        <div class="col-4 text-end">
-         <button type="button" class="btn btn-outline-light me-2" onclick="window.location.href='/login'">Login</button>
-         <button type="button" class="btn btn-primary" onclick="window.location.href='/singup'">Sign up</button>
+         <button type="button" class="btn btn-outline-light me-2" onclick="window.location.href={% url 'login' %}">Login</button>
+         <button type="button" class="btn btn-primary" onclick="window.location.href={% url 'singup' %}">Sign up</button>
        </div>
      </div>
    </nav>

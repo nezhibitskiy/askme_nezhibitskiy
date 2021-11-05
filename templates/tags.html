@@ -1,0 +1,20 @@
+{% extends "include/base.html" %}
+{% load static %}
+
+{% block data %}
+<div class="row questions-type">
+  <p>
+    <span style="margin-top: 50px; font-size: 40px;">Tag news</span>
+  </p>          
+</div>
+
+
+{% for question in questions %}
+{% include "include/single_question.html" %}
+{% endfor %}
+
+ 
+{% endblock data %}
+{% block paginator %}
+{% include "include/paginator.html" %}
+{% endblock paginator %}

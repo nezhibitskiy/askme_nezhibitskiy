@@ -5,9 +5,11 @@ from django.core.paginator import Paginator
 new_questions = [
     {
         "title": f"Title {i}",
-        "text": f"This is text for new {i} question"
+        "text": f"This is text for {i} question"
     } for i in range(50)
 ]
+
+# def pagination():
 
 def index(request):
     paginator = Paginator(new_questions, 5)
@@ -37,17 +39,20 @@ def ask(request):
 def singup(request):
     return render(request, 'singup.html', {})
 
-tags = ['perl', 'Python', 'TechnoPark', 'MySQL', 'django', 'Mail.ru', 'Chromium', 'FireFox']
+# tags = ['perl', 'Python', 'TechnoPark', 'MySQL', 'django', 'Mail.ru', 'Chromium', 'FireFox']
 
-tag = [
-    {
-        "title": f"{tags[i]}"
-    } for i in range(tags.count)
-]
+# tag = [
+#     {
+#         "title": f"{tags[i]}"
+#     } for i in range(tags.count)
+# ]
 
 def tag(request):
+    # page = request.GET.get('page')    
+    paginator = Paginator(new_questions, 5)
     page = request.GET.get('page')
-    return render(request, 'tag.html', {})
+    content = paginator.get_page(page)
+    return render(request, 'tags.html', {'questions': content})
 
 def login(request):
     return render(request, 'login.html', {})
