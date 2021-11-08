@@ -47,12 +47,18 @@ def singup(request):
 #     } for i in range(tags.count)
 # ]
 
+<<<<<<< HEAD
 def tag(request):
     # page = request.GET.get('page')    
     paginator = Paginator(new_questions, 5)
     page = request.GET.get('page')
     content = paginator.get_page(page)
     return render(request, 'tags.html', {'questions': content})
+=======
+# def tag(request):
+#     page = request.GET.get('page')
+#     return render(request, 'tag.html', {})
+>>>>>>> dataBase
 
 def login(request):
     return render(request, 'login.html', {})

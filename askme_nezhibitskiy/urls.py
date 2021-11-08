@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls.conf import include
 
 from app import views
 
@@ -28,4 +29,8 @@ urlpatterns = [
     path('hot/', views.hot, name='hot'),
     path('new/', views.index, name='new'),
     path('tag/news', views.tag, name='tag'),
+]
+
+urlpatterns += [
+    path('catalog/', include('catalog.urls'))
 ]
