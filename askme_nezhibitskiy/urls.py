@@ -32,5 +32,5 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path('catalog/', include('catalog.urls'))
+    # path('catalog/', include('catalog.urls'))
 ]
