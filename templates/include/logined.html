@@ -1,0 +1,20 @@
+{% load static %}
+<div class="col-2">
+    <button class="btn btn-outline-primary" type="submit" onclick="window.location.href={% url 'ask' %}">Ask!</button>
+</div>
+<div class="col-2 logined">
+    <img src="{% static "img/avatar.jpg" %}" class="rounded-circle float-start" alt="...">
+</div>
+<div class="col-2">
+    <div class="row">
+      <span class="text-success">NickName</span>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <a href="#">Settings</a>
+      </div>
+      <div class="col-8">
+        <a class="ml-3" href="{% url 'logout' %}?next={{ request.get_full_path|urlencode }}">Log Out</a>
+      </div>
+    </div>
+</div>

@@ -1,14 +1,24 @@
 {% extends "include/base.html" %}
 {% load static %}
+{% load bootstrap4 %}
 
 {% block data %}
 <div class="row" style="margin-top: 50px;"></div>
+<h4 class="mb-3">Registration</h4>
 <div class="col-md-7 col-lg-8">
-  <h4 class="mb-3">Registration</h4>
-  <p class="text-danger">
-    Sorry, this email address is already registered!
-  </p>
-  <form class="needs-validation" novalidate>
+
+
+  <form novalidate action="/singup/" method="post" class="form mt-5">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+      <button type="submit" class="btn btn-primary">
+        Submit
+      </button>
+    {% endbuttons %}
+  </form>
+
+  <!-- <form class="needs-validation" novalidate>
     <div class="row g-3">
       
       <div class="col-12">
@@ -44,7 +54,7 @@
 
     <hr class="my-4">
     <button class="w-100 btn btn-primary btn-lg" onclick="window.location.href={% url 'index' %}" type="submit">Register!</button>
-  </form>
+  </form> -->
 </div>
 
 {% endblock data %}

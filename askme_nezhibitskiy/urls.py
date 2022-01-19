@@ -17,18 +17,19 @@ from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
 
-from app import views
+from questions import views
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('question/', views.question, name='question'),
     path('login/', views.login, name='login'),
+    path('logout/', views.logout, name='logout'),
     path('ask/', views.ask, name='ask'),
     path('singup/', views.singup, name='singup'),
     path('', views.index, name='index'),
     path('hot/', views.hot, name='hot'),
     path('new/', views.index, name='new'),
-    path('tag/news', views.tag, name='tag'),
+    path('tag/<str:tag>', views.tag, name='tag'),
 ]
 
 urlpatterns += [

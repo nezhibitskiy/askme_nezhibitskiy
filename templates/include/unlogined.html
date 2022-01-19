@@ -1,0 +1,7 @@
+<div class="col-2">
+    <button class="btn btn-outline-primary" type="submit" onclick="window.location.href={% url 'ask' %}">Ask!</button>
+  </div>
+  <div class="col-4 text-end">
+    <a href="{% url 'login' %}?next={{ request.get_full_path|urlencode }}"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+    <a href="{% url 'singup' %}?next={{ request.get_full_path|urlencode }}"><button type="button" class="btn btn-primary">Sign up</button></a>
+  </div>

@@ -43,8 +43,9 @@
           <div class="col-7">
             <p>
               <span>Tags: </span>
-              <span><a href={% url 'tag' %}>news</a></span>
-              <span><a href="#">history</a></span>
+              {% for tag in question.tags.all %}
+                <a href="{{ tag.get_absolute_url }}">{{ tag.title }}</a>
+              {% endfor %}
             </p>
           </div>
         </div>
